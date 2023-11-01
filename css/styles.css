@@ -1,0 +1,212 @@
+/*Variables globales*/
+:root {
+    --skin-color: green;
+    --border-style: 5px solid black;
+}
+
+body {
+    background: linear-gradient(#333, #000);
+    height: 100vh;
+
+}
+/*
+Se define el contenedor principal que incluye:
+ al yoshi, la cabeza, el cabello, los ojos y la nariz
+ */
+.yoshi {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    position: relative;
+    /*flex-direction: column;*/
+}
+
+.head {
+    width: 500px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.chin {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    z-index: 2;
+    border: var(--border-style);
+    border-radius: 50%;
+    translate: 130px 90px;
+}
+.chin-chin{
+    width: 80%;
+    height: 60%;
+    border: var(--border-style);
+    border-radius: 50%;
+    background-color: var(--skin-color);
+    z-index: 4;
+    translate:45px -70px;
+    rotate: 55deg;
+}
+
+.hair-container {
+    width: 100px;
+    height: 400px;
+}
+
+.hair {
+    width: 80px; 
+    height: 100px; 
+    border: var(--border-style); 
+    background: orange;
+    -webkit-transform: rotate(45deg) skew(15deg, 15deg);
+    -moz-transform: rotate(45deg) skew(15deg, 15deg);
+    -ms-transform: rotate(45deg) skew(15deg, 15deg);
+    -o-transform: rotate(45deg) skew(15deg, 15deg);
+    transform: rotate(45deg) skew(15deg, 15deg);
+}
+
+.hair-container :nth-child(1) {
+    rotate: 70deg;
+    translate: -135px 190px;
+}
+
+.hair-container :nth-child(2) {
+    rotate: 100deg;
+    translate: -130px 150px;
+}
+
+.hair-container :nth-child(3) {
+    rotate: 130deg;
+    translate: -160px 100px;
+}
+.nose-container {
+    width: 190px;
+    height: 200px;
+    translate: 50px 25px;
+    z-index: 5;
+    position: relative;
+}
+
+.nose {
+    width: 250px;
+    height: 230px;
+    border: var(--border-style);
+    border-radius: 50%;
+    background-color: var(--skin-color);
+    display: flex;
+    justify-content: center;
+}
+.holes {
+    width: 50%;
+    height: 30%;
+    display: flex;
+    translate: 0px 35px;
+}
+
+.hole {
+    width: 30%;
+    height: 45%;
+    border-top: var(--border-style);
+    border-radius: 50%;
+    border-bottom: 0px;
+}
+
+.left-hole {
+    translate: -20px 0px;
+    rotate: 55deg;
+}
+
+.right-hole {
+    translate: 10px 25px;
+    rotate: -20deg;
+}
+
+.eyes {
+    width: 300px;
+    height: 250px;
+    align-self: start;
+    display: flex;
+    z-index: 3;
+}
+
+/*definimos el patron de un solo ojo*/
+.eye {
+    width: 135px;
+    height: 200px;
+    border: var(--border-style);
+    border-radius: 50%;
+    background-color: var(--skin-color);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.right-eye {
+    translate: -65px 30px;
+}
+
+.retina {
+    width: 100px;
+    height: 160px;
+    border: var(--border-style);
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    translate: -13px 0px;
+}
+
+.pupila {
+    width: 35px;
+    height: 60px;
+    border: var(--border-style);
+    border-radius: 50%;
+    background-color: black;
+    translate: 8px 15px;
+    transition: all 0.5s;
+    justify-content: end;
+    align-items: center;
+}
+
+.pupila:hover {
+    translate: 10px 10px;
+}
+
+.shine {
+    width: 15px;
+    height: 30px;
+    border: var(--border-style);
+    border-radius: 50%;
+    background-color: white;
+    translate: 10px 5px;
+}
+
+.mouth {
+    width: 120px;
+    height: 150px;
+    background-color: white;
+    border: var(--border-style);
+    border-radius: 50%;
+    border-right: 0;
+    border-bottom: 0px;
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    translate: 140px 150px;
+    z-index: 3;
+}
+
+.tongue {
+    --style: 80%;
+    width: var(--style);
+    height: var(--style);
+    background-color: red;
+    border: var(--border-style);
+    border-radius: 50%;
+    position: absolute;
+    translate: 0px -15px;
+    rotate: 30deg;
+}
